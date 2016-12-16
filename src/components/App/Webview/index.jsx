@@ -41,7 +41,11 @@ class Webview extends Component {
   render() {
     const { defaultUrl } = this.props;
     return (
-      <webview id={styles.root} src={defaultUrl} />
+      <webview
+        id={styles.root}
+        src={defaultUrl}
+        partition="persist:thr0w"
+      />
     );
   }
 }

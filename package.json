@@ -1,6 +1,6 @@
 {
   "name": "thr0w-url-kiosk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Thr0w Url Kiosk",
   "scripts": {
     "build": "NODE_ENV=production webpack -p -d source-map",
