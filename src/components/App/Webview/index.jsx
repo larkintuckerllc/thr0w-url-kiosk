@@ -44,7 +44,7 @@ class Webview extends Component {
       <webview
         id={styles.root}
         src={defaultUrl}
-        partition="persist:thr0w"
+        partition="persist:browser"
       />
     );
   }
