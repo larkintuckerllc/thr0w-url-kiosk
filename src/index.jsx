@@ -15,6 +15,7 @@ import App from './components/App';
 import './favicon.ico';
 import './index.scss';
 
+chrome.power.requestKeepAwake('display');
 fromApiServer.initialize(() => {
   fromApiThr0w.initialize(() => {
     fromApiDefaultUrl.initialize(() => {
