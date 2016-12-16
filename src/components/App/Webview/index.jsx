@@ -11,7 +11,10 @@ class Webview extends Component {
     this.handleMessage = this.handleMessage.bind(this);
   }
   componentDidMount() {
+    const { defaultUrl } = this.props;
     this.webviewEl = document.getElementById(styles.root);
+    this.webviewEl.setAttribute('partition', 'persist:browser');
+    this.webviewEl.src = defaultUrl;
     onMessage(this.handleMessage);
   }
   componentWillReceiveProps(nextProps) {
@@ -39,12 +42,9 @@ class Webview extends Component {
     }
   }
   render() {
-    const { defaultUrl } = this.props;
     return (
       <webview
         id={styles.root}
-        src={defaultUrl}
-        partition="persist:browser"
       />
     );
   }
